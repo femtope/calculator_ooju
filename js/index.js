@@ -4,8 +4,6 @@ window.onload = function () {
         n3 = document.getElementById("n3").innerHTML,
         result = document.querySelectorAll('.result p')[0],
         clear = document.getElementsByClassName('clear')[0];
-     console.log("N2: ", n2);
-    console.log("N3: ", n3);
     for (var i = 0; i < buttons.length; i += 1) {
     if (buttons[i].innerHTML === '=') {
       buttons[i].addEventListener("click", calculate(i));
@@ -64,7 +62,6 @@ window.onload = function () {
 				result.innerHTML += buttons[i].innerHTML;
 			}
     };
-      
   }
   
   function calculate(i) {
@@ -73,7 +70,6 @@ window.onload = function () {
         	var bugFix = final_res.replace(/\d+/g, function(numb){ 
 				return parseInt(numb, 10);
 			});
-			
 			  
       result.innerHTML = eval(bugFix);
     };
