@@ -54,11 +54,15 @@ h1 {
   cursor: pointer;
   font-size: 30px;
   color: #2c3e50;
-  margin: 5px;
-    
-     background: #1ab188;
+  margin: 5px;  
+  background: #1ab188;
   color: #ffffff;
 } 
+
+.button1 {
+    background-color: cornflowerblue;
+    color: white;
+}
 
 .clear {
   width: 95px;
