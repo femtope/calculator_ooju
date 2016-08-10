@@ -1,8 +1,11 @@
 window.onload = function () {
     var buttons = document.getElementsByTagName('button'),
+        n2 = document.getElementById("n2").innerHTML,
+        n3 = document.getElementById("n3").innerHTML,
         result = document.querySelectorAll('.result p')[0],
         clear = document.getElementsByClassName('clear')[0];
-  
+     console.log("N2: ", n2);
+    console.log("N3: ", n3);
     for (var i = 0; i < buttons.length; i += 1) {
     if (buttons[i].innerHTML === '=') {
       buttons[i].addEventListener("click", calculate(i));
@@ -21,11 +24,12 @@ window.onload = function () {
         buttons[i].addEventListener("click", cosine(i));
     }
         
-    else if (buttons[i].innerHTML === "n2") {
+    else if (buttons[i].innerHTML === n2) {
+        
         buttons[i].addEventListener("click", power2(i));
     }
     
-    else if (buttons[i].innerHTML === "n3") {
+    else if (buttons[i].innerHTML === n3) {
         buttons[i].addEventListener("click", power3(i));
     }
     
@@ -128,6 +132,7 @@ window.onload = function () {
         return function (){
             i = parseInt(result.innerHTML);
             result.innerHTML = Math.pow(i,2);
+            console.log("N2: ", n2);
         };
     }
     
